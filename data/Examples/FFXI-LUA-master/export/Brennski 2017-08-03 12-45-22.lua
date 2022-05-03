@@ -1,0 +1,17 @@
+sets.exported={
+    main={ name="Umaru", augments={'"Store TP"+4','VIT+16','Accuracy+18','DMG:+6',}},
+    sub="Utu Grip",
+    ammo="Ginsen",
+    head="Flam. Zucchetto +1",
+    body={ name="Valorous Mail", augments={'Accuracy+21 Attack+21','STR+10','Accuracy+15','Attack+4',}},
+    hands="Flam. Manopolas +1",
+    legs={ name="Valor. Hose", augments={'Accuracy+23 Attack+23','"Dbl.Atk."+3','VIT+4','Attack+5',}},
+    feet={ name="Valorous Greaves", augments={'Accuracy+25 Attack+25','"Dbl.Atk."+4','CHR+8','Attack+6',}},
+    neck="Lissome Necklace",
+    waist="Ioskeha Belt",
+    left_ear="Telos Earring",
+    right_ear="Cessance Earring",
+    left_ring="Ilabrat Ring",
+    right_ring="Niqmaddu Ring",
+    back="Grounded Mantle",
+}

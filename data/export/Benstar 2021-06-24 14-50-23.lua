@@ -1,0 +1,17 @@
+sets.exported={
+    main="Albion",
+    sub="Utu Grip",
+    ammo="Staunch Tathlum",
+    head="Sakpata's Helm",
+    body="Sakpata's Plate",
+    hands="Sakpata's Gauntlets",
+    legs="Sakpata's Cuisses",
+    feet="Sakpata's Leggings",
+    neck={ name="Loricate Torque +1", augments={'Path: A',}},
+    waist="Flume Belt +1",
+    left_ear="Odnowa Earring +1",
+    right_ear="Ethereal Earring",
+    left_ring="Defending Ring",
+    right_ring="Shneddick Ring",
+    back="Solemnity Cape",
+}

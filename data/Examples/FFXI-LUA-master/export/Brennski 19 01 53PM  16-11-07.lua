@@ -1,0 +1,17 @@
+sets.exported={
+    main="Tanmogayi +1",
+    sub={ name="Colada", augments={'"Dbl.Atk."+1','STR+7','Accuracy+19','Attack+18','DMG:+15',}},
+    ammo="Staunch Tathlum",
+    head="Rawhide Mask",
+    body="Vrikodara Jupon",
+    hands={ name="Herculean Gloves", augments={'DEX+9','Magic dmg. taken -3%','"Refresh"+1',}},
+    legs={ name="Herculean Trousers", augments={'Attack+7','Weapon skill damage +4%','Accuracy+15',}},
+    feet={ name="Herculean Boots", augments={'CHR+6','STR+14','"Refresh"+1','Mag. Acc.+14 "Mag.Atk.Bns."+14',}},
+    neck="Sanctity Necklace",
+    waist="Fucho-no-Obi",
+    left_ear="Genmei Earring",
+    right_ear="Infused Earring",
+    left_ring="Warp Ring",
+    right_ring="Gelatinous Ring +1",
+    back="Solemnity Cape",
+}

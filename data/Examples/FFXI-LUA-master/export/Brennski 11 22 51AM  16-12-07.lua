@@ -1,0 +1,17 @@
+sets.exported={
+    main={ name="Aettir", augments={'Accuracy+70','Mag. Evasion+50','System: 2 ID: 114 Val: 9',}},
+    sub="Nepenthe Grip",
+    ammo="Homiliary",
+    head="Rawhide Mask",
+    body="Runeist Coat +1",
+    hands={ name="Herculean Gloves", augments={'DEX+9','Magic dmg. taken -3%','"Refresh"+1',}},
+    legs={ name="Carmine Cuisses", augments={'Accuracy+15','Attack+10','"Dual Wield"+5',}},
+    feet="Erilaz Greaves +1",
+    neck="Sanctity Necklace",
+    waist="Fucho-no-Obi",
+    left_ear="Genmei Earring",
+    right_ear="Infused Earring",
+    left_ring="Warden's Ring",
+    right_ring="Gelatinous Ring +1",
+    back={ name="Ogma's cape", augments={'STR+20','Accuracy+20 Attack+20','"Dbl.Atk."+10',}},
+}

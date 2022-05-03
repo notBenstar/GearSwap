@@ -1,0 +1,18 @@
+sets.exported={
+    main="Fettering Blade",
+    sub={ name="Atoyac", augments={'Occ. atk. twice+8','"Mag.Atk.Bns."+10',}},
+    range={ name="Compensator", augments={'DMG:+15','Rng.Atk.+15','"Mag.Atk.Bns."+15',}},
+    ammo="Orichalc. Bullet",
+    head="Rawhide Mask",
+    body="Emet Harness +1",
+    hands={ name="Herculean Gloves", augments={'DEX+9','Magic dmg. taken -3%','"Refresh"+1',}},
+    legs={ name="Carmine Cuisses", augments={'Accuracy+8','Attack+6','"Dual Wield"+3',}},
+    feet={ name="Herculean Boots", augments={'Mag. Acc.+15 "Mag.Atk.Bns."+15','VIT+10','"Mag.Atk.Bns."+12',}},
+    neck="Sanctity Necklace",
+    waist="Flume Belt +1",
+    left_ear="Genmei Earring",
+    right_ear="Infused Earring",
+    left_ring="Petrov Ring",
+    right_ring="Fortified Ring",
+    back={ name="Mecisto. Mantle", augments={'Cap. Point+37%','Mag. Acc.+2','DEF+8',}},
+}

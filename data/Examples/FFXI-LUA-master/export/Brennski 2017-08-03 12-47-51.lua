@@ -1,0 +1,17 @@
+sets.exported={
+    main={ name="Umaru", augments={'"Store TP"+4','VIT+16','Accuracy+18','DMG:+6',}},
+    sub="Utu Grip",
+    ammo="Knobkierrie",
+    head={ name="Valorous Mask", augments={'Accuracy+18','Weapon skill damage +3%','STR+4','Attack+11',}},
+    body={ name="Valorous Mail", augments={'Accuracy+25','Weapon skill damage +4%','DEX+8','Attack+5',}},
+    hands={ name="Valorous Mitts", augments={'Accuracy+17 Attack+17','Weapon skill damage +3%','VIT+9','Accuracy+3','Attack+12',}},
+    legs="Hiza. Hizayoroi +2",
+    feet="Hiza. Sune-Ate +1",
+    neck="Caro Necklace",
+    waist="Grunfeld Rope",
+    left_ear="Ishvara Earring",
+    right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +25',}},
+    left_ring="Regal Ring",
+    right_ring="Niqmaddu Ring",
+    back="Grounded Mantle",
+}

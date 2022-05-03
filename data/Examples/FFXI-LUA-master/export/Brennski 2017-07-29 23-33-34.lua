@@ -1,0 +1,16 @@
+sets.exported={
+    main="Comeuppances +1",
+    range="Animator P",
+    head={ name="Herculean Helm", augments={'Accuracy+24 Attack+24','Weapon skill damage +5%','DEX+4',}},
+    body="Hiza. Haramaki +1",
+    hands={ name="Rao Kote", augments={'Pet: HP+100','Pet: Accuracy+15','Pet: Damage taken -3%',}},
+    legs={ name="Herculean Trousers", augments={'"Mag.Atk.Bns."+25','Phys. dmg. taken -5%','INT+6','Mag. Acc.+9',}},
+    feet="Hermes' Sandals",
+    neck="Sanctity Necklace",
+    waist="Klouskap Sash",
+    left_ear="Genmei Earring",
+    right_ear="Infused Earring",
+    left_ring="Defending Ring",
+    right_ring="Vocane Ring",
+    back="Solemnity Cape",
+}

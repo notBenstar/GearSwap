@@ -1,0 +1,233 @@
+--TP set toggle input: //gs c toggle TP set----1 Standard, 2 Solo, 3 Marches, 4 AccuracyLite, 5 AccuracyMax, 6 DT, 7 DTAccuracy--
+--Idle set toggle input: //gs c toggle Idle set----1 Standard, 2 DT--
+--Requiescat set toggle input: //gs c toggle Req set----1 Attack, 2 Accuracy--
+--Chant du Cygne set toggle input: //gs c toggle CDC set----1 Attack, 2 Accuracy--
+ 
+Enmity_Spells = S{"Foil","Flash","Blank Gaze","Geist Wall","Jettatura"}
+ 
+function get_sets()
+         
+    --Idle Sets--   
+    sets.Idle = {}
+     
+    sets.Idle.index = {'Standard','DT'}
+    Idle_ind = 1
+    Gear_Debug = 0
+     
+    sets.Idle.Standard = {ammo="Demonry stone",
+                  head="Iuitl headgear +1",neck="Twilight torque", ear1="Spellbreaker earring", ear2="Sanare earring",
+                      body="Runeist coat",hands="Umuthi gloves",ring1="Patricius Ring",ring2="Defending Ring",
+                  back="Shadow mantle",waist="Fucho-no-obi",legs="Blood cuisses",feet="Iuitl gaiters +1"}
+                           
+    sets.Idle.DT = {ammo="Demonry stone",
+                  head="Iuitl headgear +1",neck="Twilight torque", ear1="Spellbreaker earring", ear2="Sanare earring",
+                      body="Futhark coat +1",hands="Umuthi gloves",ring1="Patricius Ring",ring2="Defending Ring",
+                  back="Mollusca mantle",waist="Flume belt",legs="Qaaxo tights",feet="Iuitl gaiters +1"}                            
+                             
+                             
+     
+     
+    --TP Sets--
+    sets.TP = {}
+ 
+    sets.TP.index = {'Standard', 'DW', 'Marches', 'AccuracyLite', 'AccuracyFull', 'DT', 'DTAccuracy'}
+    --1=Standard, 2=DW, 3=Marches, 4=AccuracyLite, 5=AccuracyFull, 6=DT, 7=DTAccuracy--
+    TP_ind = 1
+     
+    sets.TP.Standard = {ammo="Ginsen",
+                head="Iuitl headgear +1",neck="Asperity necklace", ear1="Steelflash earring", ear2="Bladeborn earring",
+                body="Qaaxo harness",hands="Qaaxo mitaines",ring1="Epona's ring",ring2="Rajas ring",
+                back="Atheling mantle",waist="Windbuffet belt",legs="Iuitl tights +1",feet="Qaaxo leggings"}
+                         
+    sets.TP.Marches = {ammo="Honed tathlum",
+                head="Iuitl headgear +1",neck="Asperity necklace", ear1="Steelflash earring", ear2="Bladeborn earring",
+                body="Qaaxo harness",hands="Qaaxo mitaines",ring1="Epona's ring",ring2="Rajas ring",
+                back="Atheling mantle",waist="Windbuffet belt",legs="Iuitl tights +1",feet="Qaaxo leggings"}
+                             
+    sets.TP.DW = {ammo="Honed tathlum",
+                head="Iuitl headgear +1",neck="Asperity necklace", ear1="Brutal earring", ear2="Suppanomimi",
+                body="Qaaxo harness",hands="Qaaxo mitaines",ring1="Epona's ring",ring2="Rajas ring",
+                back="Atheling mantle",waist="Windbuffet belt",legs="Iuitl tights +1",feet="Qaaxo leggings"}
+                     
+    sets.TP.AccuracyLite = {ammo="Honed tathlum",
+                head="Iuitl headgear +1",neck="Asperity necklace", ear1="Steelflash earring", ear2="Bladeborn earring",
+                body="Qaaxo harness",hands="Qaaxo mitaines",ring1="Epona's ring",ring2="Rajas ring",
+                back="Atheling mantle",waist="Windbuffet belt",legs="Iuitl tights +1",feet="Qaaxo leggings"}
+     
+    sets.TP.AccuracyFull = {ammo="Honed tathlum",
+                head="Iuitl headgear +1",neck="Asperity necklace", ear1="Steelflash earring", ear2="Bladeborn earring",
+                body="Qaaxo harness",hands="Qaaxo mitaines",ring1="Epona's ring",ring2="Rajas ring",
+                back="Atheling mantle",waist="Windbuffet belt",legs="Iuitl tights +1",feet="Qaaxo leggings"}
+                             
+    sets.TP.DT = {ammo="Demonry stone",
+                  head="Iuitl headgear +1",neck="Twilight torque", ear1="Spellbreaker earring", ear2="Sanare earring",
+                      body="Futhark coat +1",hands="Umuthi gloves",ring1="Patricius Ring",ring2="Defending Ring",
+                  back="Repulse mantle",waist="Flume belt",legs="Qaaxo tights",feet="Iuitl gaiters +1"}
+                   
+    sets.TP.DTAccuracy = {ammo="Honed tathlum",
+                head="Iuitl headgear +1",neck="Asperity necklace", ear1="Steelflash earring", ear2="Bladeborn earring",
+                body="Qaaxo harness",hands="Qaaxo mitaines",ring1="Epona's ring",ring2="Rajas ring",
+                back="Atheling mantle",waist="Windbuffet belt",legs="Iuitl tights +1",feet="Qaaxo leggings"}    
+     
+    --Weaponskill Sets--
+    sets.WS = {}        
+     
+    sets.Requiescat = {ammo="Honed tathlum",
+                      head="Whirlpool mask",neck="Soil gorget",ear1="Brutal earring",ear2="Moonshade earring",
+                  body="Qaaxo harness",hands="Qaaxo mitaines",ring1="Epona's ring",ring2="Aquasoul ring",
+                  back="Atheling mantle",waist="Soil belt",legs="Quiahuiz trousers",feet="Qaaxo leggings"}
+                                   
+    sets.Resolution = {ammo="Aqreaqa bomblet",
+                      head="Whirlpool mask",neck="Soil gorget",ear1="Brutal earring",ear2="Moonshade earring",
+                  body="Manibozho jerkin",hands="Qaaxo mitaines",ring1="Epona's ring",ring2="Rajas ring",
+                  back="Atheling mantle",waist="Soil belt",legs="Quiahuiz trousers",feet="Manibozho boots"}
+ 
+    sets.Ruinator = {ammo="Aqreaqa bomblet",head="Whirlpool mask",neck="Snow gorget",ear1="Brutal earring",ear2="Moonshade earring",
+                  body="Manibozho jerkin",hands="Qaaxo mitaines",ring1="Epona's ring",ring2="Rajas ring",
+                  back="Atheling mantle",waist="Snow belt",legs="Manibozho brais",feet="Manibozho boots"}
+     
+    sets.Dimidiation = {ammo="Potestas bomblet",head="Uk'uxkaj cap",neck="Thunder gorget",ear1="Brutal earring",ear2="Moonshade earring",
+                  body="Qaaxo harness",hands="Futhark mitons +1",ring1="Epona's ring",ring2="Rajas ring",
+                  back="Atheling mantle",waist="Thunder belt",legs="Manibozho brais",feet="Qaaxo leggings"}               
+             
+    sets.Shockwave = {ammo="Aqreaqa bomblet",head="Whirlpool mask",neck="Soil gorget",ear1="Brutal earring",ear2="Moonshade earring",
+                  body="Manibozho jerkin",hands="Qaaxo mitaines",ring1="Epona's ring",ring2="Rajas ring",
+                  back="Atheling mantle",waist="Soil belt",legs="Manibozho brais",feet="Manibozho boots"}
+     
+    --Job Ability Sets--
+     
+    sets.JA = {}    
+     
+    sets.JA.Lunge = {ammo="Dosis tathlum",head="A'as circlet",neck="Eddy necklace",ear1="Friomisi earring",ear2="Crematio earring",
+                  body="Vanir Cotehardie",hands="Spolia cuffs",ring1="Acumen Ring",ring2="Sangoma Ring",
+                  back="Toro cape",waist="Soil belt",legs="Shneddick tights +1",feet="Weatherspoon souliers +1"}
+                   
+    sets.JA.VP = {ammo="Aqreaqa bomblet",
+                head="Whirlpool mask",neck="Asperity necklace", ear1="Steelflash earring", ear2="Bladeborn earring",
+                body="Qaaxo harness",hands="Qaaxo mitaines",ring1="Epona's ring",ring2="Rajas ring",
+                back="Atheling mantle",waist="Windbuffet belt",legs="Iuitl tights +1",feet="Qaaxo leggings"}                        
+             
+             
+             
+             
+    --Precast Sets--
+    sets.precast = {}   
+    sets.precast.FC = {head="Runeist bandeau +1",Ear1="Loquacious earring",body="Futhark coat +1",hands="Thaumas gloves",back="Fravashi Mantle",
+                        waist="Siegel Sash",legs="Futhark trousers",feet="Chelona boots"}
+    sets.enmity = {ammo="Aqreaqa bomblet",head="Runeist bandeau +1",neck="Twilight torque",ear1="Friomisi earring",ear2="Loquacious earring",
+                  body="Futhark coat +1",hands="Futhark mitons +1",ring1="Epona's ring",ring2="Rajas ring",
+                  back="Fravashi mantle",waist="Goading belt",legs="Futhark trousers",feet="Futhark boots +1"}
+end
+ 
+ 
+ 
+function precast(spell)
+    if spell.action_type == 'Magic' then
+        equip(sets.precast.FC)                      
+    end 
+     
+    if spell.english == 'Requiescat' then
+            equip(sets.Requiescat)
+            send_command('@input /echo Requiescat Set')
+        elseif spell.english == 'Resolution' then       
+            equip(sets.Resolution)
+            send_command('@input /echo Resolution Set')
+        elseif spell.english == 'Ruinator' then
+            equip(sets.Ruinator)
+            send_command('@input /echo Ruinator Set')
+        elseif spell.english == 'Shockwave' then
+            equip(sets.Shockwave)
+            send_command('@input /echo Shockwave Set')
+        elseif spell.english == 'Sanguine Blade' then
+            equip(sets.JA.Lunge)
+            send_command('@input /echo Sanguine Blade Set')
+        elseif spell.english == 'Dimidiation' then
+            equip(sets.Dimidiation)
+            send_command('@input /echo Dimidiation Set')
+        elseif spell.english == 'Herculean Slash' then
+            equip(sets.JA.Lunge)
+            send_command('@input /echo Herculean Slash Set')
+        elseif spell.english == 'Lunge' then
+            equip(sets.JA.Lunge)
+            send_command('@input /echo Lunge Set')
+        elseif spell.english == 'Swipe' then
+            equip(sets.JA.Lunge)
+            send_command('@input /echo Lunge Set')
+        elseif spell.english == 'Swordplay' then
+            equip({hands="Futhark mitons +1"})
+        elseif spell.english == 'Battuta' then
+            equip({head="Futhark Bandeau"})
+        elseif spell.english == 'Pflug' then
+            equip({feet="Runeist bottes"})
+        elseif spell.english == "Vallation" then
+            equip({body="Runeist Coat",legs="Futhark Trousers"})
+        elseif spell.english == "Valiance" then
+            equip({body="Runeist Coat",legs="Futhark Trousers"})
+        elseif spell.english == "Rayke" then
+            equip({feet="Futhark boots +1"})
+        elseif spell.english == "Liement" then
+            equip({body="Futhark coat +1"})
+    end 
+     
+end
+     
+function midcast(spell,act)
+    if spell.action_type == 'Magic' then
+        if spell.english == 'Phalanx' then
+            equip({head="Futhark bandeau"})
+        elseif Enmity_Spells:contains(spell.name) then
+            equip(sets.enmity)  
+            send_command('@input /echo Enmity Set')
+        else
+            equip(sets.precast.FC)      
+        end
+    end
+end
+ 
+function aftercast(spell)
+    if player.status == 'Engaged' then
+        equip(sets.TP[sets.TP.index[TP_ind]])
+        send_command('@input /echo TP Set')
+    else
+        if Gear_Debug == 0 then
+            equip(sets.Idle.Standard)
+            send_command('@input /echo Idle Set')
+        else
+        end
+    end
+end
+ 
+function status_change(new,old)
+    if new == 'Engaged' then
+        equip(sets.TP[sets.TP.index[TP_ind]])
+    else
+        equip(sets.Idle.Standard)
+    end
+end
+ 
+function self_command(command)  
+    if command == 'equip TP set' then       
+        TP_ind = 1
+        equip(sets.TP[sets.TP.index[TP_ind]])
+        send_command('@input /echo TP Set')
+    elseif command == 'equip Idle set' then     
+        equip(sets.Idle.Standard)
+        send_command('@input /echo Idle Set')
+    elseif command == 'equip DW set' then       
+        TP_ind = 2      
+        equip(sets.TP[sets.TP.index[TP_ind]])
+        send_command('@input /echo DW Set')
+    elseif command == 'equip DT set' then       
+        TP_ind = 6      
+        equip(sets.TP[sets.TP.index[TP_ind]])
+        send_command('@input /echo DT Set')     
+    elseif command == 'change debug mode' then
+        if Gear_Debug == 1 then
+            Gear_Debug = 0
+            send_command('@input /echo Debug Mode Set to 0')
+        else
+            Gear_Debug = 1
+            send_command('@input /echo Debug Mode Set to 1')
+        end
+    end
+end
