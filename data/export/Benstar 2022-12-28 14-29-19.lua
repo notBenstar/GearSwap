@@ -1,0 +1,17 @@
+sets.exported={
+    main="Carnwenhan",
+    sub={ name="Taming Sari", augments={'STR+10','DEX+10','DMG:+15','"Treasure Hunter"+1',}},
+    range={ name="Linos", augments={'Accuracy+15','"Dbl.Atk."+2','Quadruple Attack +3',}},
+    head={ name="Nyame Helm", augments={'Path: B',}},
+    body={ name="Bihu Jstcorps. +3", augments={'Enhances "Troubadour" effect',}},
+    hands={ name="Nyame Gauntlets", augments={'Path: B',}},
+    legs={ name="Nyame Flanchard", augments={'Path: B',}},
+    feet={ name="Nyame Sollerets", augments={'Path: B',}},
+    neck={ name="Bard's Charm +1", augments={'Path: A',}},
+    waist={ name="Sailfi Belt +1", augments={'Path: A',}},
+    left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
+    right_ear="Regal Earring",
+    left_ring={ name="Metamor. Ring +1", augments={'Path: A',}},
+    right_ring="Rufescent Ring",
+    back={ name="Intarabus's Cape", augments={'STR+20','Accuracy+20 Attack+20','STR+4','Weapon skill damage +8%',}},
+}

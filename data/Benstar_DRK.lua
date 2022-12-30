@@ -92,7 +92,7 @@ function get_sets()
 	TP_ind = 1
 	
 	sets.TP.Standard = {
-		ammo={ name="Seeth. Bomblet +1", augments={'Path: A',}},
+		ammo="Coiste Bodhar",--ammo={ name="Seeth. Bomblet +1", augments={'Path: A',}},
 		head="Flamma Zucchetto +2",--"Sakpata's Helm",
 		body="Sakpata's Plate",
 		hands="Sakpata's Gauntlets",
@@ -101,9 +101,9 @@ function get_sets()
 		neck={ name="Abyssal Beads +2", augments={'Path: A',}},
 		waist={ name="Sailfi Belt +1", augments={'Path: A',}},
 		left_ear="Telos Earring",
-		right_ear="Cessance Earring",
+		right_ear="Schere Earring",
 		left_ring="Niqmaddu Ring",
-		right_ring="Petrov Ring",
+		right_ring="Hetairoi Ring",
 		back={ name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}}
 		}
 	
@@ -176,15 +176,26 @@ function get_sets()
 			 	body=WSD_Body,hands=WSD_Hands,ring1="Flamma ring",ring2="Regal ring",
 			   	back=STR_Back,waist="Sailfi Belt +1",legs=WSD_Legs,feet="Sulevia's Leggings +2"}
 				
-	sets.Shockwave =  {ammo="Knobkierrie",
-			    head=WSD_Head,neck="Fotia Gorget",ear1="Brutal earring",ear2="Moonshade earring",
-			 	body="Argosy Hauberk +1",hands="Odyssean gauntlets",ring1="Niqmaddu ring",ring2="Regal ring",
-				back=STR_Back,waist="Fotia belt",legs=WSD_Legs,feet="Flam. Gambieras +2"}
+	sets.Shockwave =  {
+		ammo="Knobkierrie",
+		head="Sakpata's Helm",
+		body="Ignominy Cuirass +3",
+		hands="Sakpata's Gauntlets",
+		legs="Nyame Flanchard",
+		feet="Sulevia's Leggings +2",
+		neck={ name="Abyssal Beads +2", augments={'Path: A',}},
+		waist="Fotia Belt",--{ name="Sailfi Belt +1", augments={'Path: A',}},
+		left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
+		right_ear="Thrud Earring",
+		left_ring="Niqmaddu Ring",
+		right_ring="Rufescent Ring",
+		back={ name="Ankou's Mantle", augments={'VIT+20','Accuracy+20 Attack+20','VIT+10','Weapon skill damage +10%',}}
+	}
 	
 	sets.Torcleaver = {
 			ammo="Knobkierrie",
 			head="Sakpata's Helm",
-			body="Sakpata's Plate",
+			body="Ignominy Cuirass +3",
 			hands="Sakpata's Gauntlets",
 			legs="Nyame Flanchard",
 			feet="Sulevia's Leggings +2",
@@ -231,7 +242,7 @@ function get_sets()
 	sets.Catastrophe = {
 			ammo="Knobkierrie",
 			head="Sakpata's Helm",
-			body="Sakpata's Plate",
+			body="Ignominy Cuirass +3",
 			hands="Sakpata's Gauntlets",
 			legs="Nyame Flanchard",
 			feet="Sulevia's Leggings +2",
@@ -298,8 +309,21 @@ function get_sets()
 	sets.JA.DiabolicEye = {hands="Fallen's finger gauntlets +1"}
 	
 	--Precast Sets--
-	sets.precast = {ammo="Impatiens",head="Carmine mask +1",ear1="Loquacious earring",body="Odyssean chestplate",hands="Leyline gloves",ring1="Weatherspoon ring",
-				ring2="Kishar ring",waist="Witful belt",legs="Eschite cuisses",feet="Carmine greaves +1"}
+		sets.precast = {
+		ammo="Crepuscular Pebble",
+		head={ name="Carmine Mask", augments={'Accuracy+10','DEX+10','MND+15',}},
+		body="Sacro Breastplate",
+		hands={ name="Leyline Gloves", augments={'Accuracy+15','Mag. Acc.+15','"Mag.Atk.Bns."+15','"Fast Cast"+3',}},
+		legs="Sakpata's Cuisses",
+		feet={ name="Carmine Greaves", augments={'Accuracy+10','DEX+10','MND+15',}},
+		neck="Voltsurge Torque",
+		waist="Flume Belt +1",
+		left_ear="Loquac. Earring",
+		right_ear="Malignance Earring",
+		left_ring="Defending Ring",
+		right_ring="Kishar Ring",
+		back="Solemnity Cape"
+	}
 					
 	sets.precast.dark = {ammo="Impatiens",head="Carmine mask +1",ear1="Loquacious earring",body="Odyssean chestplate",hands="Leyline gloves",ring1="Weatherspoon ring",
 				ring2="Kishar ring",waist="Witful belt",legs="Eschite cuisses",feet="Carmine greaves +1"}
@@ -656,3 +680,8 @@ function weathercheck(spell_element)
 	else		
 	end
 end
+
+function sub_job_change(new,old)
+send_command('wait 4;input /lockstyleset 10')
+end
+send_command('wait 4;input /lockstyleset 10')

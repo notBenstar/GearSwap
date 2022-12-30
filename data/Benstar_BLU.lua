@@ -75,7 +75,8 @@ function get_sets()
 	--	TelchineFeet.FC={name="Telchine Pigaches", augments={'"Fast Cast" +3'}}	
 	
 	HerculeanFeet={}
-		HerculeanFeet.Melee={name="Herculean Boots", augments={'Attack+25','MND+4','Quadruple Attack +2','Accuracy+10 Attack+10',}}
+		--HerculeanFeet.Melee={name="Herculean Boots", augments={'Attack+25','MND+4','Quadruple Attack +2','Accuracy+10 Attack+10',}}
+		HerculeanFeet.Melee={name="Herculean Boots", augments={'Accuracy+25 Attack+25','"Triple Atk."+3',}}
 		HerculeanFeet.Refresh={name="Herculean Boots", augments={'Mag. Acc.+4','"Dbl.Atk."+1','"Refresh"+2','Mag. Acc.+9 "Mag.Atk.Bns."+9',}}
 		--HerculeanFeet.CritDmg={name="Herculean Boots", augments={'Accuracy+28','Crit. hit damage +5%','DEX+9',}}
 		HerculeanFeet.WSD={name="Herculean Boots", augments={'Rng.Atk.+15','Weapon skill damage +5%','Accuracy+2','Attack+5',}}
@@ -127,41 +128,56 @@ function get_sets()
 	--TP Sets--
 	sets.TP = {}
 
-	sets.TP.index = {'StandardNoTrusts','AccuracyFull'}--, 'Marches', 'AccuracyLite', 'AccuracyMid', 'AccuracyFull', 'DT', 'DTAccuracy', 'DTHighAccuracy', 'MDT'}
+	sets.TP.index = {'StandardNoTrusts','AccuracyFull','DT'}--, 'Marches', 'AccuracyLite', 'AccuracyMid', 'AccuracyFull', 'DT', 'DTAccuracy', 'DTHighAccuracy', 'MDT'}
 	--1=StandardNoTrusts, 2=Marches, 3=AccuracyLite, 4=AccuracyMid, 5=AccuracyFull, 6=DT, 7=DTAccuracy 8=DTHighAccuracy 9=MDT--
 	TP_ind = 1
 	
 	--DW III +1200JP--
 	sets.TP.StandardNoTrusts = {
-		ammo="Ginsen",
-		head={ name="Adhemar Bonnet +1", augments={'DEX+12','AGI+12','Accuracy+20',}},
-		body={ name="Adhemar Jacket +1", augments={'STR+12','DEX+12','Attack+20',}},
-		hands={ name="Adhemar Wrist. +1", augments={'DEX+12','AGI+12','Accuracy+20',}},
-		legs={ name="Samnuha Tights", augments={'STR+10','DEX+10','"Dbl.Atk."+3','"Triple Atk."+3',}},
-		feet=HerculeanFeet.Melee,
-		neck="Clotharius Torque",
-		waist="Sailfi Belt +1",
-		left_ear="Telos Earring",
-		right_ear="Suppanomimi",
-		left_ring="Ilabrat Ring",
-		right_ring="Epona's Ring",
-		back=AmbuCapes.Crit
+			ammo="Ginsen",
+			head={ name="Adhemar Bonnet +1", augments={'DEX+12','AGI+12','Accuracy+20',}},
+			body={ name="Adhemar Jacket +1", augments={'STR+12','DEX+12','Attack+20',}},
+			hands={ name="Adhemar Wrist. +1", augments={'DEX+12','AGI+12','Accuracy+20',}},
+			legs={ name="Samnuha Tights", augments={'STR+10','DEX+10','"Dbl.Atk."+3','"Triple Atk."+3',}},
+			feet=HerculeanFeet.Melee,
+			neck="Mirage Stole +1",
+			waist="Sailfi Belt +1",
+			left_ear="Telos Earring",
+			right_ear="Suppanomimi",
+			left_ring="Ilabrat Ring",
+			right_ring="Epona's Ring",
+			back=AmbuCapes.Crit
 		}
 		
 	sets.TP.AccuracyFull = {
-		ammo="Ginsen",
-		head={ name="Dampening Tam", augments={'DEX+10','Accuracy+15','Mag. Acc.+15','Quadruple Attack +3',}},
-		body={ name="Adhemar Jacket +1", augments={'STR+12','DEX+12','Attack+20',}},
-		hands="Jhakri Cuffs +2",
-		legs="Aya. Cosciales +1",
-		feet="Aya. Gambieras +1",
-		neck="Lissome Necklace",
-		waist="Kentarch Belt +1",
-		left_ear="Cessance Earring",
-		right_ear="Zennaroi Earring",
-		right_ring="Cacoethic Ring",
-		left_ring="Cacoethic Ring +1",
-		back=AmbuCapes.Crit
+			ammo="Ginsen",
+			head={ name="Dampening Tam", augments={'DEX+10','Accuracy+15','Mag. Acc.+15','Quadruple Attack +3',}},
+			body={ name="Adhemar Jacket +1", augments={'STR+12','DEX+12','Attack+20',}},
+			hands="Jhakri Cuffs +2",
+			legs="Aya. Cosciales +1",
+			feet="Aya. Gambieras +1",
+			neck="Lissome Necklace",
+			waist="Kentarch Belt +1",
+			left_ear="Cessance Earring",
+			right_ear="Zennaroi Earring",
+			right_ring="Cacoethic Ring",
+			left_ring="Cacoethic Ring +1",
+			back=AmbuCapes.Crit
+		}
+		sets.TP.DT = {
+			ammo="Aurgelmir Orb",
+			head="Malignance Chapeau",
+			body="Malignance Tabard",
+			hands="Malignance Gloves",
+			legs={ name="Samnuha Tights", augments={'STR+10','DEX+10','"Dbl.Atk."+3','"Triple Atk."+3',}},
+			feet="Malignance Boots",
+			neck="Mirage Stole +1",
+			waist="Reiki Yotai",--{ name="Sailfi Belt +1", augments={'Path: A',}},
+			left_ear="Dedition Earring",
+			right_ear="Suppanomimi",
+			left_ring="Chirich Ring +1",
+			right_ring="Chirich Ring +1",
+			back={ name="Rosmerta's Cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Crit.hit rate+10',}}
 		}
 	
 	
@@ -219,25 +235,25 @@ function get_sets()
 	Expiacion_ind = 1
 	
 	sets.Expiacion.Attack = {
-		ammo="Ginsen",
+		ammo="Aurgelmir Orb",
 		head=HerculeanHelm.WSD,
-		body="Jhakri Robe +2",
+		body="Assim. Jubbah +2",
 		hands="Jhakri Cuffs +2",
 		legs={ name="Samnuha Tights", augments={'STR+10','DEX+10','"Dbl.Atk."+3','"Triple Atk."+3',}},
 		feet=HerculeanFeet.WSD,
 		neck="Caro Necklace",
-		waist="Prosilio Belt",
+		waist={ name="Sailfi Belt +1", augments={'Path: A',}},
 		left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +25',}},
 		right_ear="Ishvara Earring",
 		left_ring="Ilabrat Ring",
-		right_ring="Rufescent Ring",
+		right_ring="Metamor. Ring +1",
 		back=AmbuCapes.WSD
 	}
 	
 	sets.WS.SanguineBlade = {
 		ammo="Pemphredo Tathlum",
 		head="Pixie Hairpin +1",
-		neck="Sanctity Necklace",
+		neck="Baetyl Pendant",
 		ear1="Friomisi Earring",
 		ear2="Hecate's earring",
 		body="Samnuha coat",
@@ -265,6 +281,21 @@ function get_sets()
 		right_ring="Rufescent Ring",
 		back=AmbuCapes.WSD
    }
+   sets.WS.Elemental = {
+		ammo={ name="Ghastly Tathlum +1", augments={'Path: A',}},
+		head="Nyame Helm",
+		body="Nyame Mail",
+		hands="Nyame Gauntlets",
+		legs={ name="Nyame Flanchard", augments={'Path: B',}},
+		feet="Nyame Sollerets",
+		neck="Baetyl Pendant",
+		waist="Orpheus's Sash",
+		left_ear="Regal Earring",
+		right_ear="Friomisi Earring",
+		left_ring={ name="Metamor. Ring +1", augments={'Path: A',}},
+		right_ring="Jhakri Ring",
+		back={ name="Rosmerta's Cape", augments={'STR+20','Accuracy+20 Attack+20','DEX+10','Weapon skill damage +10%',}}
+	}
 	
 	sets.SavageBlade = {}
 	
@@ -376,18 +407,17 @@ function get_sets()
 				feet="Thereoid Greaves"})
 		
 	sets.BlueMagic.INT = {
-		ammo="Pemphredo Tathlum",
-		head=HerculeanHelm.Nuke,
-		body={ name="Samnuha Coat", augments={'Mag. Acc.+15','"Mag.Atk.Bns."+15','"Fast Cast"+5','"Dual Wield"+5',}},
-		hands={ name="Leyline Gloves", augments={'Accuracy+15','Mag. Acc.+15','"Mag.Atk.Bns."+15','"Fast Cast"+3',}},
+		ammo={ name="Ghastly Tathlum +1", augments={'Path: A',}},
+		body={ name="Cohort Cloak +1", augments={'Path: A',}},
+		hands={ name="Amalric Gages", augments={'INT+10','Mag. Acc.+15','"Mag.Atk.Bns."+15',}},
 		legs={ name="Amalric Slops", augments={'MP+60','Mag. Acc.+15','"Mag.Atk.Bns."+15',}},
-		feet=HerculeanFeet.Nuke,
-		neck="Incanter's Torque",
-		waist="Yamabuki-no-Obi",
-		left_ear="Hecate's Earring",
-		right_ear="Friomisi Earring",
-		left_ring="Shiva Ring",
-		right_ring="Shiva Ring",
+		feet={ name="Herculean Boots", augments={'Mag. Acc.+19 "Mag.Atk.Bns."+19','INT+9','Mag. Acc.+12','"Mag.Atk.Bns."+10',}},
+		neck="Baetyl Pendant",
+		waist="Orpheus's Sash",
+		left_ear="Friomisi Earring",
+		right_ear="Regal Earring",
+		left_ring={ name="Metamor. Ring +1", augments={'Path: A',}},
+		right_ring="Jhakri Ring",
 		back={ name="Cornflower Cape", augments={'MP+17','DEX+3','Accuracy+2','Blue Magic skill +10',}}
 	}
 				  
@@ -431,7 +461,7 @@ function get_sets()
 	sets.BlueMagic.Stun = {
 		ammo="Pemphredo Tathlum",
 		head="Carmine Mask",
-		neck="Sanctity Necklace",
+		neck="Baetyl Pendant",
 		ear1="Zennaroi Earring",ear2="Dignitary's Earring",
 		body="Amalric Doublet",
 		hands={ name="Adhemar Wrist. +1", augments={'DEX+12','AGI+12','Accuracy+20',}},
@@ -459,7 +489,7 @@ function get_sets()
 	sets.BlueMagic.ChargedWhisker = {
 		ammo="Pemphredo Tathlum",
 		head="Amalric Coif",
-		neck="Sanctity Necklace",
+		neck="Baetyl Pendant",
 		ear1="Hecate's earring",ear2="Friomisi earring",
 		body={ name="Adhemar Jacket +1", augments={'STR+12','DEX+12','Attack+20',}},
 		hands={ name="Adhemar Wrist. +1", augments={'DEX+12','AGI+12','Accuracy+20',}},
@@ -487,7 +517,7 @@ function get_sets()
 	sets.BlueMagic.MagicAccuracy = {
 		ammo="Pemphredo Tathlum",
 		head="Amalric Coif",
-		neck="Sanctity Necklace",
+		neck="Baetyl Pendant",
 		ear1="Psystorm earring",ear2="Lifestorm earring",
 		body="Amalric Doublet",
 		hands="Jhakri Cuffs +1",
@@ -636,33 +666,35 @@ function get_sets()
 	sets.precast.FC = {}
 	
 	sets.precast.FC.Standard = {
-		ammo="Mavi Tathlum",
+		ammo={ name="Ghastly Tathlum +1", augments={'Path: A',}},
 		head={ name="Carmine Mask", augments={'Accuracy+10','DEX+10','MND+15',}},
-		body={ name="Samnuha Coat", augments={'Mag. Acc.+15','"Mag.Atk.Bns."+15','"Fast Cast"+5','"Dual Wield"+5',}},
+		body="Jhakri Robe +2",
 		hands={ name="Leyline Gloves", augments={'Accuracy+15','Mag. Acc.+15','"Mag.Atk.Bns."+15','"Fast Cast"+3',}},
 		legs={ name="Psycloth Lappas", augments={'MP+80','Mag. Acc.+15','"Fast Cast"+7',}},
 		feet={ name="Carmine Greaves", augments={'Accuracy+10','DEX+10','MND+15',}},
 		neck="Voltsurge Torque",
 		waist="Witful Belt",
 		left_ear="Loquac. Earring",
-		right_ear="Friomisi Earring",
-		left_ring="Shiva Ring",
-		right_ring="Shiva Ring",
-		back={ name="Cornflower Cape", augments={'MP+17','DEX+3','Accuracy+2','Blue Magic skill +10',}}
+		right_ear="Etiolation Earring",
+		left_ring="Jhakri Ring",
+		right_ring="Kishar Ring",
+		back={ name="Fi Follet Cape +1", augments={'Path: A',}}
 	}
 	
 	sets.precast.FC.Blue = {
-		ammo="Impatiens",
-		head="Carmine Mask",
+		ammo={ name="Ghastly Tathlum +1", augments={'Path: A',}},
+		head={ name="Carmine Mask", augments={'Accuracy+10','DEX+10','MND+15',}},
+		body="Jhakri Robe +2",
+		hands={ name="Leyline Gloves", augments={'Accuracy+15','Mag. Acc.+15','"Mag.Atk.Bns."+15','"Fast Cast"+3',}},
+		legs={ name="Psycloth Lappas", augments={'MP+80','Mag. Acc.+15','"Fast Cast"+7',}},
+		feet={ name="Carmine Greaves", augments={'Accuracy+10','DEX+10','MND+15',}},
 		neck="Voltsurge Torque",
-		ear1="Loquac. Earring",ear2="None",
-		body="Hashishin Mintan",
-		hands="Leyline Gloves",
-		ring1="Prolix Ring",ring2="Weatherspoon Ring",
-		back="Perimede Cape",
 		waist="Witful Belt",
-		legs="Enif Cosciales",
-		feet="Carmine Greaves"
+		left_ear="Loquac. Earring",
+		right_ear="Etiolation Earring",
+		left_ring="Jhakri Ring",
+		right_ring="Kishar Ring",
+		back={ name="Fi Follet Cape +1", augments={'Path: A',}}
 	}	
 end
 
@@ -707,8 +739,12 @@ function precast(spell)
 		equip(sets.WS.CircleBlade)
 	end
 	
-	if spell.english == 'Sanguine Blade' or spell.english == 'Red Lotus Blade' then
+	if spell.english == 'Sanguine Blade' then
 		equip(sets.WS.SanguineBlade)
+	end
+	
+	if spell.english == 'Seraph Blade' or spell.english == 'Red Lotus Blade' then
+		equip(sets.WS.Elemental)
 	end
 	
 	if spell.english == 'Box Step' then

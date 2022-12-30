@@ -103,18 +103,18 @@ function get_sets()
 		MeleeTP_ind = 1
 		
 		sets.MeleeTP.Standard = {
-			head={ name="Adhemar Bonnet +1", augments={'DEX+12','AGI+12','Accuracy+20',}},
-			body={ name="Adhemar Jacket +1", augments={'STR+12','DEX+12','Attack+20',}},
-			hands={ name="Adhemar Wrist. +1", augments={'DEX+12','AGI+12','Accuracy+20',}},
-			legs={ name="Samnuha Tights", augments={'STR+10','DEX+10','"Dbl.Atk."+3','"Triple Atk."+3',}},
-			feet={ name="Herculean Boots", augments={'Attack+25','MND+4','Quadruple Attack +2','Accuracy+10 Attack+10',}},
-			neck="Iskur gorget",--"Clotharius Torque",--
-			waist={ name="Sailfi Belt +1", augments={'Path: A',}},--'Reiki Yotai',
-			left_ear="Telos Earring",
-			right_ear="Suppanomimi",
+			hhead="Mummu Bonnet +1",
+			body="Mummu Jacket +1",
+			hands="Mummu Wrists +1",
+			legs="Mummu Kecks +1",
+			feet="Mummu Gamash. +1",
+			neck="Defiant Collar",
+			waist="Grunfeld Rope",
+			left_ear="Assuage Earring",
+			right_ear="Odnowa Earring",
 			left_ring="Petrov Ring",
-			right_ring="Epona's Ring",
-			back={ name="Camulus's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}}
+			right_ring="Mummu Ring",
+			back={ name="Mecisto. Mantle", augments={'Cap. Point+27%','HP+25','Mag. Acc.+1','DEF+2',}}
 		}
 		
 		sets.MeleeTP.Accuracy = {
@@ -140,11 +140,11 @@ function get_sets()
 		--						
 		sets.MeleeTP.DT = {
 			head="Malignance Chapeau",
-			body="Malignance Tabard",
+			body="Nyame Mail",
 			hands="Malignance Gloves",
-			legs={ name="Nyame Flanchard", augments={'Path: B',}},--legs="Malignance Tights",
-			feet="Malignance Boots",
-			neck="Iskur gorget",
+			legs="Nyame Flanchard",
+			feet="Nyame Sollerets",
+			neck="Clotharius Torque",
 			waist="Reiki Yotai",
 			left_ear="Telos Earring",
 			right_ear="Suppanomimi",
@@ -286,8 +286,8 @@ function get_sets()
 		sets.LastStand.Attack = {
 			--ammo="Adlivun Bullet",
 			head="Meghanada Visor",
-			body={ name="Lanun Frac +3", augments={'Enhances "Loaded Deck" effect',}},
-			hands="Meg. gloves +2",
+			body="Meghanada Cuirie",
+			hands="Meg. gloves +1",
 			legs={ name="Adhemar Kecks", augments={'AGI+10','Rng.Acc.+15','Rng.Atk.+15',}},
 			feet={ name="Lanun Bottes +3", augments={'Enhances "Wild Card" effect',}},
 			neck="Fotia Gorget",
@@ -396,7 +396,7 @@ function get_sets()
 			right_ear="Etiolation Earring",
 			left_ring="Luzaf's Ring",
 			right_ring="Barataria Ring",
-			back={ name="Camulus's Mantle", augments={'AGI+20','Mag. Acc+20 /Mag. Dmg.+20','AGI+10','Weapon skill damage +10%',}},
+			back="Camulus's Mantle",
 			}
 							   
 		sets.JA.TacticianRoll = {
@@ -555,8 +555,6 @@ end
 			end
 			
 			if spell.english == "Corsair's Roll" or spell.english == "Ninja's Roll" or spell.english == "Hunter's Roll" or spell.english == "Chaos Roll" or spell.english == "Magus's Roll" or spell.english == "Healer's Roll" or spell.english == "Drachen Roll" or spell.english == "Choral Roll" or spell.english == "Monk's Roll" or spell.english == "Beast Roll" or spell.english == "Samurai Roll" or spell.english == "Evoker's Roll" or spell.english == "Rogue's Roll" or spell.english == "Warlock's Roll" or spell.english == "Fighter's Roll" or spell.english == "Puppet Roll" or spell.english == "Gallant's Roll" or spell.english == "Wizard's Roll" or spell.english == "Dancer's Roll" or spell.english == "Scholar's Roll" or spell.english == "Bolter's Roll" or spell.english == "Allies' Roll" or spell.english == "Miser's Roll" or spell.english == "Caster's Roll" or spell.english == "Companion's Roll" or spell.english == "Avenger's Roll" then
-			
-			
 				equip(sets.JA.PhantomRoll)
 			end
 			
@@ -857,8 +855,3 @@ end
 			end
 			
 		end
-		
-function sub_job_change(new,old)
-send_command('wait 4;input /lockstyleset 31')
-end
-send_command('wait 4;input /lockstyleset 31')

@@ -41,7 +41,12 @@ end
 function init_gear_sets()
 ----------------------------------------GEAR SETS START HERE------------------------------------------------------
 --TH
-    sets.TreasureHunter = {}
+    sets.TreasureHunter = {
+	waist="Chaac Belt",
+	head={ name="Herculean Helm", augments={'MND+1','Pet: STR+7','"Treasure Hunter"+1','Accuracy+7 Attack+7','Mag. Acc.+2 "Mag.Atk.Bns."+2',}},
+	hands={ name="Plun. Armlets +1", augments={'Enhances "Perfect Dodge" effect',}},
+	feet="Skulk. Poulaines",
+	}
 --SA
     sets.buff['Sneak Attack'] = {}
 --TA
@@ -64,71 +69,97 @@ function init_gear_sets()
 --FC
     sets.precast.FC = {}
 --WS
-    sets.precast.WS = {
-	ammo="Jukukik feather",
+	sets.precast.WS = {
+	ammo="Yamarang",
     head={ name="Adhemar Bonnet +1", augments={'DEX+12','AGI+12','Accuracy+20',}},
-    body={ name="Adhemar Jacket +1", augments={'STR+12','DEX+12','Attack+20',}},
+    body="Abnoba Kaftan",
     hands={ name="Adhemar Wrist. +1", augments={'DEX+12','AGI+12','Accuracy+20',}},
-    legs={ name="Samnuha Tights", augments={'STR+10','DEX+10','"Dbl.Atk."+3','"Triple Atk."+3',}},
-    feet={ name="Herculean Boots", augments={'Attack+25','MND+4','Quadruple Attack +2','Accuracy+10 Attack+10',}},
-    neck="Clotharius Torque",
-    waist="Windbuffet Belt +1",
-    left_ear="Sherida Earring",
-	right_ear="Moonshade Earring",
-    left_ring="Epona's Ring",
-    right_ring="Ilabrat Ring",
-    back={ name="Canny Cape", augments={'DEX+5','AGI+2','"Dual Wield"+2','Crit. hit damage +1%',}}
+    legs={ name="Nyame Flanchard", augments={'Path: B',}},
+    feet="Malignance Boots",
+    neck="Fotia Gorget",
+    waist="Fotia Belt",
+    left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
+    right_ear="Odr Earring",
+    left_ring="Ilabrat Ring",
+    right_ring="Apate Ring",
+    back="Sacro Mantle"
 	}
 --MAGIC AOE WS
-    sets.precast.WS['Aeolian Edge'] = {}
+		sets.precast.WS['Aeolian Edge'] = {
+		ammo={ name="Seeth. Bomblet +1", augments={'Path: A',}},
+		head="Nyame Helm",
+		body="Nyame Mail",
+		hands="Nyame Gauntlets",
+		legs={ name="Nyame Flanchard", augments={'Path: B',}},
+		feet="Nyame Sollerets",
+		neck="Baetyl Pendant",
+		waist="Orpheus's Sash",
+		left_ear="Friomisi Earring",
+		right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
+		left_ring={ name="Metamor. Ring +1", augments={'Path: A',}},
+		right_ring="Dingir Ring",
+		back="Sacro Mantle"
+	}
 --add 2 dashes below to remove TH from AE
     sets.precast.WS['Aeolian Edge'].TH = set_combine(sets.precast.WS['Aeolian Edge'], sets.TreasureHunter)
 --IDLE  (basically add movement+ to melee set)
     sets.idle = {
-	ammo="Yamarang",
-    head={ name="Adhemar Bonnet +1", augments={'DEX+12','AGI+12','Accuracy+20',}},
-    body={ name="Adhemar Jacket +1", augments={'STR+12','DEX+12','Attack+20',}},
-    hands={ name="Adhemar Wrist. +1", augments={'DEX+12','AGI+12','Accuracy+20',}},
-    legs={ name="Samnuha Tights", augments={'STR+10','DEX+10','"Dbl.Atk."+3','"Triple Atk."+3',}},
-    feet="Jute Boots",
-    neck="Clotharius Torque",
-    waist="Windbuffet Belt +1",
-    left_ear="Suppanomimi",
-    right_ear="Brutal Earring",
-    left_ring="Shneddick Ring",
-    right_ring="Defending Ring",
-    back={ name="Canny Cape", augments={'DEX+5','AGI+2','"Dual Wield"+2','Crit. hit damage +1%',}}
-	--main={ name="Malevolence", augments={'INT+10','Mag. Acc.+10','"Mag.Atk.Bns."+10','"Fast Cast"+5',}},
-    --sub={ name="Malevolence", augments={'INT+7','Mag. Acc.+3','"Mag.Atk.Bns."+5','"Fast Cast"+2',}},
-    --ammo="Hydrocera",
-    --head={ name="Herculean Helm", augments={'"Dbl.Atk."+1','DEX+1','"Refresh"+2','Accuracy+19 Attack+19','Mag. Acc.+7 "Mag.Atk.Bns."+7',}},
-    --body={ name="Samnuha Coat", augments={'Mag. Acc.+15','"Mag.Atk.Bns."+15','"Fast Cast"+5','"Dual Wield"+5',}},
-    --hands={ name="Herculean Gloves", augments={'Magic dmg. taken -1%','Magic burst dmg.+1%','"Refresh"+2','Accuracy+5 Attack+5',}},
-    --legs={ name="Herculean Trousers", augments={'Pet: Attack+10 Pet: Rng.Atk.+10','"Cure" potency +3%','"Refresh"+2','Mag. Acc.+4 "Mag.Atk.Bns."+4',}},
-    --feet={ name="Herculean Boots", augments={'Mag. Acc.+4','"Dbl.Atk."+1','"Refresh"+2','Mag. Acc.+9 "Mag.Atk.Bns."+9',}},
-    --neck="Sanctity Necklace",
-    --waist="Eschan Stone",
-    --left_ear="Loquac. Earring",
-    --right_ear="Etiolation Earring",
-    --left_ring="Lebeche Ring",
-    --right_ring="Metamorph Ring",
-    --back="Solemnity Cape"
+		head="Meghanada Visor +2",
+		body="Meg. Cuirie +2",
+		hands="Meg. Gloves +2",
+		legs="Meg. Chausses +2",
+		feet="Meg. Jam. +2",
+		neck="Sanctity Necklace",
+		waist="Flume Belt +1",
+		left_ear="Etiolation Earring",
+		right_ear="Infused Earring",
+		left_ring="Shneddick Ring",
+		right_ring="Defending Ring",
+		back="Solemnity Cape"
 	}
 -- MELEE
     sets.engaged = {
+	--ammo="Yamarang",
+    --head={ name="Adhemar Bonnet +1", augments={'DEX+12','AGI+12','Accuracy+20',}},
+    --body={ name="Adhemar Jacket +1", augments={'STR+12','DEX+12','Attack+20',}},
+    --hands={ name="Adhemar Wrist. +1", augments={'DEX+12','AGI+12','Accuracy+20',}},
+    --legs={ name="Samnuha Tights", augments={'STR+10','DEX+10','"Dbl.Atk."+3','"Triple Atk."+3',}},
+    --feet={ name="Herculean Boots", augments={'Attack+25','MND+4','Quadruple Attack +2','Accuracy+10 Attack+10',}},
+    --neck="Clotharius Torque",
+    --waist="Windbuffet Belt +1",
+    --left_ear="Sherida Earring",
+	--right_ear="Telos Earring",
+    --left_ring="Epona's Ring",
+    --right_ring="Gere Ring",
+    --back={ name="Canny Cape", augments={'DEX+5','AGI+2','"Dual Wield"+2','Crit. hit damage +1%',}}
+	
 	ammo="Yamarang",
-    head={ name="Adhemar Bonnet +1", augments={'DEX+12','AGI+12','Accuracy+20',}},
-    body={ name="Adhemar Jacket +1", augments={'STR+12','DEX+12','Attack+20',}},
-    hands={ name="Adhemar Wrist. +1", augments={'DEX+12','AGI+12','Accuracy+20',}},
-    legs={ name="Samnuha Tights", augments={'STR+10','DEX+10','"Dbl.Atk."+3','"Triple Atk."+3',}},
-    feet={ name="Herculean Boots", augments={'Attack+25','MND+4','Quadruple Attack +2','Accuracy+10 Attack+10',}},
+    head="Malignance Chapeau",
+    body="Malignance tabard",
+    hands="Malignance Gloves",
+    legs={ name="Nyame Flanchard", augments={'Path: B',}},
+    feet="Malignance Boots",
     neck="Clotharius Torque",
-    waist="Windbuffet Belt +1",
-    left_ear="Sherida Earring",
-	right_ear="Telos Earring",
+    waist={ name="Sailfi Belt +1", augments={'Path: A',}},
+    left_ear="Suppanomimi",
+    right_ear="Brutal Earring",
     left_ring="Epona's Ring",
     right_ring="Gere Ring",
-    back={ name="Canny Cape", augments={'DEX+5','AGI+2','"Dual Wield"+2','Crit. hit damage +1%',}}
+    back="Sacro Mantle"
+	}
+sets.odychest = {
+	head={ name="Herculean Helm", augments={'"Dbl.Atk."+1','DEX+1','"Refresh"+2','Accuracy+19 Attack+19','Mag. Acc.+7 "Mag.Atk.Bns."+7',}},
+    body="Meg. Cuirie +2",
+    hands={ name="Herculean Gloves", augments={'Magic dmg. taken -1%','Magic burst dmg.+1%','"Refresh"+2','Accuracy+5 Attack+5',}},
+    legs={ name="Herculean Trousers", augments={'Pet: Attack+10 Pet: Rng.Atk.+10','"Cure" potency +3%','"Refresh"+2','Mag. Acc.+4 "Mag.Atk.Bns."+4',}},
+    feet={ name="Herculean Boots", augments={'Mag. Acc.+4','"Dbl.Atk."+1','"Refresh"+2','Mag. Acc.+9 "Mag.Atk.Bns."+9',}},
+    neck="Sanctity Necklace",
+    waist="Flume Belt +1",
+    left_ear="Etiolation Earring",
+    right_ear="Infused Earring",
+    left_ring="Stikini Ring +1",
+    right_ring="Stikini Ring +1",
+    back="Solemnity Cape"
 	}
 end
 ----------------------------------------GEAR SETS END HERE---------------------------------------------------------
@@ -259,3 +290,8 @@ function th_action_check(category, param)
         then return true
     end
 end
+
+function sub_job_change(new,old)
+send_command('wait 4;input /lockstyleset 4')
+end
+send_command('wait 4;input /lockstyleset 4')

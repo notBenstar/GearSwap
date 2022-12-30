@@ -41,11 +41,11 @@ function get_sets()
 			neck="Sanctity Necklace", 
 			ear1="Etiolation Earring",
 			ear2="infused earring",
-			body="Futhark coat +1",
+			body="Runeist coat +1",
 			hands={name="Herculean Gloves", augments={'Magic dmg. taken -1%','Magic burst dmg.+1%','"Refresh"+2','Accuracy+5 Attack+5',}},
 			ring1="Defending ring",
 			ring2="Shneddick ring",
-			back="Shadow mantle",
+			back="Evasionist's cape",
 			waist="Flume Belt +1",
 			legs={name="Herculean Trousers", augments={'Pet: Attack+10 Pet: Rng.Atk.+10','"Cure" potency +3%','"Refresh"+2','Mag. Acc.+4 "Mag.Atk.Bns."+4',}},
 			feet={name="Herculean Boots", augments={'Mag. Acc.+4','"Dbl.Atk."+1','"Refresh"+2','Mag. Acc.+9 "Mag.Atk.Bns."+9',}}
@@ -95,36 +95,35 @@ function get_sets()
 		TP_ind = 1
 	
 		sets.TP.Standard = {
-			ammo="Ginsen",
+			ammo="Coiste Bodhar",
 			head={ name="Adhemar Bonnet +1", augments={'DEX+12','AGI+12','Accuracy+20',}},
-			neck="Lissome Necklace", 
-			ear1="Sherida Earring", 
-			ear2="Cessance earring",
 			body={ name="Adhemar Jacket +1", augments={'STR+12','DEX+12','Attack+20',}},
 			hands={ name="Adhemar Wrist. +1", augments={'DEX+12','AGI+12','Accuracy+20',}},
-			ring1="Epona's ring", 
-			ring2="Petrov ring",
-			back="Ogma's cape",
-			waist="Ioskeha belt",
 			legs={ name="Samnuha Tights", augments={'STR+10','DEX+10','"Dbl.Atk."+3','"Triple Atk."+3',}},
-			feet={name="Herculean Boots", augments={'Attack+25','MND+4','Quadruple Attack +2','Accuracy+10 Attack+10',}}
+			feet="Nyame Sollerets",
+			neck="Anu Torque",
+			waist={ name="Sailfi Belt +1", augments={'Path: A',}},
+			left_ear="Telos Earring",
+			right_ear="Sherida Earring",
+			left_ring="Epona's Ring",
+			right_ring="Niqmaddu Ring",
+			back={ name="Ogma's Cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Store TP"+10',}}
 		}
 							
 		sets.TP.Tank = {
-			ammo="Staunch tathlum",
-			head="Fu. bandeau +1",
-			neck="Twilight torque", 
-			ear1="Etiolation Earring", 
-			ear2="Genmei earring",
-			body="Erilaz surcoat +1",
-			hands="Buremte Gloves",
-			ring1="Defending ring",
-			ring2="Warden's ring",
-			back={name="Evasionist's Cape", augments={'Enmity+1','"Embolden"+11','"Dbl.Atk."+1','Damage taken-2%',}},
-			--back={ name="Ogma's cape", augments={'DEX+20','Accuracy+20 Attack+20','"Store TP"+10',}},
-			waist="Flume Belt +1",
-			legs="Erilaz Leg Guards +1",
-			feet="Erilaz Greaves +1"
+			ammo="Yamarang",
+			head="Nyame Helm",
+			body="Nyame Mail",
+			hands="Nyame Gauntlets",
+			legs={ name="Nyame Flanchard", augments={'Path: B',}},
+			feet="Nyame Sollerets",
+			neck={ name="Futhark Torque +2", augments={'Path: A',}},
+			waist={ name="Sailfi Belt +1", augments={'Path: A',}},
+			left_ear="Telos Earring",
+			right_ear="Sherida Earring",
+			left_ring="Defending Ring",
+			right_ring="Niqmaddu Ring",
+			back={ name="Ogma's Cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Store TP"+10',}}
 		}
 		
 		
@@ -176,19 +175,19 @@ function get_sets()
 		Resolution_ind = 1
 	
 		sets.Resolution.Attack = {
-			ammo="Seething bomblet",
+			ammo={ name="Seeth. Bomblet +1", augments={'Path: A',}},
 			head={ name="Adhemar Bonnet +1", augments={'DEX+12','AGI+12','Accuracy+20',}},
-			neck="Fotia gorget",
-			ear2="Brutal earring",
-			ear1="Moonshade earring",
 			body={ name="Adhemar Jacket +1", augments={'STR+12','DEX+12','Attack+20',}},
 			hands={ name="Adhemar Wrist. +1", augments={'DEX+12','AGI+12','Accuracy+20',}},
-			ring1="Ilabrat Ring",
-			ring2="Apate ring",
-			back="Ogma's cape",
-			waist="Fotia belt",
-			legs={name="Samnuha Tights", augments={'STR+10','DEX+10','"Dbl.Atk."+3','"Triple Atk."+3',}},
-			feet={name="Herculean Boots", augments={'Attack+25','MND+4','Quadruple Attack +2','Accuracy+10 Attack+10',}}
+			legs={ name="Samnuha Tights", augments={'STR+10','DEX+10','"Dbl.Atk."+3','"Triple Atk."+3',}},
+			feet="Nyame Sollerets",
+			neck="Fotia Gorget",
+			waist="Fotia Belt",
+			left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
+			right_ear="Sherida Earring",
+			left_ring="Epona's Ring",
+			right_ring="Niqmaddu Ring",
+			back={ name="Ogma's Cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Store TP"+10',}}
 			}
 								  
 		sets.Resolution.Accuracy = {ammo="Seething bomblet +1",
@@ -202,19 +201,19 @@ function get_sets()
 		Dimidiation_ind = 1
 	
 		sets.Dimidiation.Attack = {
-			ammo="Seething bomblet",
-			head={ name="Adhemar Bonnet +1", augments={'DEX+12','AGI+12','Accuracy+20',}},
-			neck="Caro Necklace",
-			ear2="Ishvara Earring",
-			ear1="Moonshade earring",
+			ammo="Knobkierrie",
+			head={ name="Herculean Helm", augments={'Accuracy+14','Weapon skill damage +3%','STR+10','Attack+15',}},
 			body={ name="Adhemar Jacket +1", augments={'STR+12','DEX+12','Attack+20',}},
-			hands="Meg. gloves +2",
-			ring1="Ilabrat Ring",
-			ring2="Apate ring",
-			back="Ogma's cape",
-			waist="Fotia belt",
-			legs={name="Samnuha Tights", augments={'STR+10','DEX+10','"Dbl.Atk."+3','"Triple Atk."+3',}},
-			feet={name="Herculean Boots", augments={'Attack+25','MND+4','Quadruple Attack +2','Accuracy+10 Attack+10',}}
+			hands="Meg. Gloves +2",
+			legs={ name="Nyame Flanchard", augments={'Path: B',}},
+			feet="Nyame Sollerets",
+			neck="Caro Necklace",
+			waist={ name="Sailfi Belt +1", augments={'Path: A',}},
+			left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
+			right_ear="Sherida Earring",
+			left_ring="Ilabrat Ring",
+			right_ring="Niqmaddu Ring",
+			back={ name="Ogma's Cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Store TP"+10',}}
 			}
 								  
 		sets.Dimidiation.Accuracy = {
@@ -333,7 +332,7 @@ function get_sets()
 		sets.JA.Pflug = {head="Runeist bottes +1"}
 		
 		sets.JA.Embolden = {head="Erilaz galea",
-						    back="Evastionist's cape",
+						    back="Evasionist's cape",
 							legs="Futhark trousers +1"
 							}
 		

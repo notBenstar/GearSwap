@@ -52,7 +52,7 @@ function get_sets()
 		neck = "Loricate Torque +1",
 		ear1 = "Genmei Earring",
 		ear2 = "Infused Earring",
-		body = "Nyame Mail",
+		body = "Malignance Tabard",
 		hands = "Malignance Gloves",
 		ring1 = "Defending ring",
 		ring2 = "Vocane Ring",
@@ -69,7 +69,7 @@ function get_sets()
 
 	TP_ind = 1
 	sets.TP.Standard = {
-		ammo="Ginsen",
+		ammo="Coiste Bodhar",
 		head={ name="Adhemar Bonnet +1", augments={'DEX+12','AGI+12','Accuracy+20',}},
 		body="Ken. Samue +1",
 		hands={ name="Adhemar Wrist. +1", augments={'DEX+12','AGI+12','Accuracy+20',}},
@@ -78,14 +78,14 @@ function get_sets()
 		neck="Mnk. Nodowa +2",
 		waist="Moonbow Belt +1",
 		left_ear="Sherida Earring",
-		right_ear="Telos Earring",
+		right_ear="Schere Earring",
 		left_ring="Gere Ring",
 		right_ring="Niqmaddu Ring",
 		back={ name="Segomo's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Dbl.Atk."+10','Damage taken-5%',}}
 	}
 
 	sets.TP.AccuracyMid = {
-		ammo = "Ginsen",
+		ammo = "Coiste Bodhar",
 		head = {name = "Dampening Tam", augments = {"DEX+8", "Accuracy+14", "Mag. Acc.+13", "Quadruple Attack +1"}},
 		body = {name = "Adhemar Jacket +1", augments = {"STR+12", "DEX+12", "Attack+20"}},
 		hands = {name = "Adhemar Wrist. +1", augments = {"STR+12", "DEX+12", "Attack+20"}},
@@ -101,7 +101,7 @@ function get_sets()
 	}
 
 	sets.TP.AccuracyFull = {
-		ammo="Ginsen",
+		ammo="Coiste Bodhar",
 		head={ name="Dampening Tam", augments={'DEX+10','Accuracy+15','Mag. Acc.+15','Quadruple Attack +3',}},
 		body="Ken. Samue +1",
 		hands={ name="Adhemar Wrist. +1", augments={'DEX+12','AGI+12','Accuracy+20',}},
@@ -117,23 +117,23 @@ function get_sets()
 	}
 
 	sets.TP.DT = {
-		ammo = "Staunch Tathlum",
+		ammo = "Coiste Bodhar",
 		head = "Malignance Chapeau",
-		body = "Nyame Mail",
+		body = "Malignance Tabard",
 		hands = "Malignance Gloves",
 		legs="Nyame flanchard",
 		feet="Malignance boots",
 		neck = "Mnk. Nodowa +2",
 		waist = "Moonbow Belt +1",
 		left_ear = "Sherida Earring",
-		right_ear = "Telos Earring",
+		right_ear = "Schere Earring",
 		left_ring = "Gere Ring",
 		right_ring = "Niqmaddu Ring",
 		back = {name = "Segomo's Mantle", augments = {"DEX+20", "Accuracy+20 Attack+20", '"Dbl.Atk."+10'}}
 	}
 
 	sets.TP.DTAccuracy = {
-		ammo = "Staunch Tathlum",
+		ammo = "Coiste Bodhar",
 		head = {name = "Herculean Helm", augments = {"Accuracy+19 Attack+19", "Damage taken-3%", "AGI+3", "Accuracy+2"}},
 		body = "Ashera Harness",
 		hands = {name = "Adhemar Wrist. +1", augments = {"STR+12", "DEX+12", "Attack+20"}},
@@ -434,7 +434,7 @@ function aftercast(spell)
 	if player.status == "Engaged" then
 		equip(sets.TP[sets.TP.index[TP_ind]])
 		if buffactive["Impetus"] then
-			equip({Body = "Bhikku Cyclas +1"})
+			equip({Body = "Bhikku Cyclas +2"})
 		end
 	else
 		equip(sets.Idle[sets.Idle.index[Idle_ind]])
@@ -451,7 +451,7 @@ function status_change(new, old)
 	if player.status == "Engaged" then
 		equip(sets.TP[sets.TP.index[TP_ind]])
 		if buffactive["Impetus"] then
-			equip({Body = "Bhikku Cyclas +1"})
+			equip({Body = "Bhikku Cyclas +2"})
 		end
 	else
 		equip(sets.Idle[sets.Idle.index[Idle_ind]])
@@ -479,3 +479,8 @@ function self_command(command)
 		equip(sets.Idle[sets.Idle.index[Idle_ind]])
 	end
 end
+
+function sub_job_change(new,old)
+send_command('wait 4;input /lockstyleset 20')
+end
+send_command('wait 4;input /lockstyleset 20')

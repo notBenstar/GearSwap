@@ -1,0 +1,17 @@
+sets.exported={
+    main="Carnwenhan",
+    sub={ name="Taming Sari", augments={'STR+10','DEX+10','DMG:+15','"Treasure Hunter"+1',}},
+    range={ name="Linos", augments={'Accuracy+15','"Dbl.Atk."+2','Quadruple Attack +3',}},
+    head={ name="Bihu Roundlet +3", augments={'Enhances "Con Anima" effect',}},
+    body={ name="Bihu Jstcorps. +3", augments={'Enhances "Troubadour" effect',}},
+    hands={ name="Bihu Cuffs +3", augments={'Enhances "Con Brio" effect',}},
+    legs={ name="Bihu Cannions +3", augments={'Enhances "Soul Voice" effect',}},
+    feet={ name="Bihu Slippers +3", augments={'Enhances "Nightingale" effect',}},
+    neck={ name="Bard's Charm +1", augments={'Path: A',}},
+    waist={ name="Sailfi Belt +1", augments={'Path: A',}},
+    left_ear="Regal Earring",
+    right_ear="Ishvara Earring",
+    left_ring={ name="Metamor. Ring +1", augments={'Path: A',}},
+    right_ring="Rufescent Ring",
+    back={ name="Intarabus's Cape", augments={'CHR+20','Accuracy+20 Attack+20','CHR+10','Weapon skill damage +10%',}},
+}

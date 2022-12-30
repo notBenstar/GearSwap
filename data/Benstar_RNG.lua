@@ -61,7 +61,7 @@ function get_sets()
 	Idle_ind = 1
 	sets.Idle.Standard = {
 		head="Malignance Chapeau",
-		body="Nyame Mail",
+		body="Malignance Tabard",
 		hands="Malignance Gloves",
 		legs="Nyame flanchard",
 		feet="Malignance Boots",
@@ -77,7 +77,7 @@ function get_sets()
 	}
 	sets.Idle.DT = {
 		head = {name = "Herculean Helm", augments = {"Accuracy+19 Attack+19", "Damage taken-3%", "AGI+3", "Accuracy+2"}},
-		body = "Meg. Cuirie +1",
+		body = "Malignance Tabard",
 		hands = "Kurys Gloves",
 		legs = "Mummu Kecks +2",
 		feet = "Ahosi Leggings",
@@ -108,10 +108,18 @@ function get_sets()
 		hands={ name="Adhemar Wrist. +1", augments={'DEX+12','AGI+12','Accuracy+20',}},
 		legs={ name="Samnuha Tights", augments={'STR+10','DEX+10','"Dbl.Atk."+3','"Triple Atk."+3',}},
 		feet={ name="Herculean Boots", augments={'Attack+25','MND+4','Quadruple Attack +2','Accuracy+10 Attack+10',}},
+		--head="Malignance Chapeau",
+		--body="Malignance Tabard",
+		--hands="Malignance Gloves",
+		--legs="Nyame flanchard",
+		--feet="Malignance Boots",
 		neck="Iskur Gorget",
+		--neck="Clotharius Torque",
 		waist="Sailfi Belt +1",
 		left_ear="Telos Earring",
 		right_ear="Suppanomimi",
+		--left_ring="Chirich Ring +1",
+		--right_ring="Chirich Ring +1",
 		left_ring="Petrov Ring",
 		right_ring="Epona's Ring",
 		back={ name="Belenus's Cape", augments={'DEX+20','Accuracy+20 Attack+20','"Dbl.Atk."+10',}}
@@ -283,8 +291,9 @@ function get_sets()
 	sets.Ranged = {}
 	sets.Ranged.index = {"Standard", "HighAccuracy"}
 	sets.Ranged.Standard = {
+		ammo = "Chrono Bullet",
 		head="Meghanada Visor +2",
-		body="Meg. Cuirie +2",
+		body="Nisroch jerkin",
 		hands="Malignance Gloves",
 		legs={ name="Adhemar Kecks", augments={'AGI+10','Rng.Acc.+15','Rng.Atk.+15',}},
 		feet="Meg. Jam. +2",
@@ -501,7 +510,7 @@ function get_sets()
 
 	sets.MagicGun = {}
 	sets.MagicGun.Attack = {
-		--ammo="Quelling Bolt",
+		ammo="Quelling Bolt",
 		--head={ name="Herculean Helm", augments={'Mag. Acc.+20 "Mag.Atk.Bns."+20','Damage taken-1%','INT+1','"Mag.Atk.Bns."+15',}},
 		--body={ name="Samnuha Coat", augments={'Mag. Acc.+15','"Mag.Atk.Bns."+15','"Fast Cast"+5','"Dual Wield"+5',}},
 		body="Cohort Cloak +1",
@@ -971,3 +980,8 @@ function self_command(command)
 		send_command("@input /echo <----- WS set changed to " .. sets.WS.index[WS_ind] .. " ----->")
 	end
 end
+
+function sub_job_change(new,old)
+send_command('wait 4;input /lockstyleset 30')
+end
+send_command('wait 4;input /lockstyleset 30')

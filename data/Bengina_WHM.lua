@@ -32,7 +32,7 @@ function get_sets()
 		ammo="Homiliary",
 		head="Befouled Crown",
 		body="Theo. Bliaut +1",
-		hands="Nyame Gauntlets",
+		hands={ name="Chironic Gloves", augments={'Mag. crit. hit dmg. +6%','VIT+8','"Refresh"+1','Accuracy+13 Attack+13','Mag. Acc.+6 "Mag.Atk.Bns."+6',}},
 		legs="Assid. Pants +1",
 		feet="Nyame Sollerets",
 		neck="Sanctity Necklace",

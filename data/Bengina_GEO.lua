@@ -311,7 +311,7 @@ function get_sets()
 		body="Azimuth Coat",
 		hands="Geo. Mitaines +1",
 		legs="Assid. Pants +1",
-		feet="Nyame Sollerets",
+		feet="Geomancy Sandals",
 		neck="Sanctity Necklace",
 		waist="Austerity Belt +1",
 		left_ear="Handler's Earring +1",

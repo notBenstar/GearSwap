@@ -62,7 +62,7 @@ function get_sets()
 	sets.Idle.Standard = {
 		ammo="Staunch Tathlum",
 		head="Hjarrandi Helm",
-		body="Sakpata's Plate",
+		body="Sacro Breastplate",
 		hands="Sakpata's Gauntlets",
 		legs="Sakpata's Cuisses",
 		feet="Sakpata's Leggings",
@@ -100,18 +100,18 @@ function get_sets()
 	TP_ind = 1
 
 	sets.TP.Standard = {
-		ammo="Ginsen",
-		head="Hjarrandi Helm",
+		ammo="Aurgelmir Orb",
+		head="Flam. Zucchetto +2",
 		body="Sakpata's Plate",
 		hands="Sakpata's Gauntlets",
 		legs="Sakpata's Cuisses",
-		feet="Sakpata's Leggings",
+		feet="Flam. Gambieras +2",
 		neck="Clotharius Torque",
 		waist={ name="Sailfi Belt +1", augments={'Path: A',}},
 		left_ear="Telos Earring",
-		right_ear="Dedition Earring",
+		right_ear="Cessance Earring",
 		left_ring="Niqmaddu Ring",
-		right_ring="Petrov Ring",
+		right_ring="Flamma Ring",
 		back={ name="Cichol's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Dbl.Atk."+10','Damage taken-5%',}}
 	}
 
@@ -425,17 +425,17 @@ function get_sets()
 
 	sets.Savage = {
 		ammo="Knobkierrie",
-		head="Hjarrandi Helm",
+		head="Flam. Zucchetto +2",
 		body="Sakpata's Plate",
 		hands="Sakpata's Gauntlets",
-		legs="Sakpata's Cuisses",
-		feet="Sakpata's Leggings",
+		legs={ name="Nyame Flanchard", augments={'Path: B',}},
+		feet="Sulev. Leggings +2",
 		neck="Caro Necklace",
 		waist={ name="Sailfi Belt +1", augments={'Path: A',}},
 		left_ear="Thrud Earring",
 		right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
 		left_ring="Niqmaddu Ring",
-		right_ring="Rufescent Ring",
+		right_ring="Flamma Ring",
 		back={ name="Cichol's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Dbl.Atk."+10','Damage taken-5%',}}
 	}
 
